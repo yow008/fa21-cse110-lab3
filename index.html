@@ -5,10 +5,191 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sep 23, 2021</title>
         <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="mystyle.css">
+        <style>
+            
+            
+            p.intro {               /*Combinators*/
+                font-size: 30pt;
+            }
+            div ~ p {
+                color: blue;
+            }
+            div + p {
+                background-color: rgba(255, 255, 0, 0.404);
+            }
+            ol > li {
+                color: rebeccapurple;
+            }
+            ol li {
+                color: goldenrod;
+            }
+            
+            
+            h1, h2, h3 { font-family: helvetica; }  /*Selector List*/
+            
+            #firstname {            /*ID Selector*/
+                background-color: yellow;
+            }
+
+            @font-face {
+                font-family: myFirstFont;
+                src: url(sansation_light.woff);
+                }
+
+            p {                 /*Element Selector*/
+                font-family: myFirstFont;
+                font-size: 12pt;
+            }
+
+            label* {            /*Universal Selector*/
+                background-color: orange;
+            }
+            
+             body {
+                    background-color: lightgreen;
+             }
+
+            @media only screen and (max-width: 600px) {
+                body {
+                    background-color: darkgreen;
+                }
+            }
+            form {
+                background-color: tomato;
+                color: black;
+                width: 20em;
+            }
+            
+            .em {           /*Class Selector*/
+                width: 20em;
+            }
+            .ch {
+                width: 10ch;
+            }
+            .px {
+                width: 20px;
+            }
+            h1 {
+                font-size: 14mm;
+                color: darkcyan;
+                text-align: center;
+                text-decoration: overline;
+            }
+            h2 {
+                font-size: 2pc;
+                color: darkcyan;
+                text-align: center;
+            }
+            h3{
+                text-align: right;
+                text-decoration: line-through;
+            }
+
+            .box {
+                width: 350px;
+                height: 150px;
+                margin-top: 8px;
+                margin-right: 8px;
+                margin-bottom: 12px;
+                margin-left: 8px;
+                padding-top: 2px;
+                padding-right: 30px;
+                padding-bottom: 40px;
+                padding-left: 16px;
+                border-style: solid;
+                border-radius: 1em;
+                border-color: purple;
+                border-width: 2px;
+            }
+            div{
+                margin: 75px 200px 75px 100px;
+                padding: 2px 6px 2px 6px;
+                height: 50px;
+                width: 22%;
+                max-width: 16%;
+                border: 1px solid #1be2f0;
+                background-color: #1be2f0;
+                font-size: 16vw;
+            }
+            p{
+                margin:auto
+            }
+            
+           
+            p.relative{         /*Pseudo-class Selector*/
+                position: relative;
+                left: 160px;
+            }
+            span {
+                display: inline-block;
+            }
+            span.sticky {
+                position: sticky;
+                top: 0;
+                background-color: rgba(228, 253, 1, 0.562);
+            }
+            i{
+                display:block;
+            }
+            legend{
+                width: 8%;
+                max-width: 14%;
+                background-color: wheat;
+            }
+            a:link {
+                color: rgb(111, 78, 143);
+            }
+
+            a:hover {
+                color: hsla(318, 97%, 71%, 0.712);
+            }
+            a:active {
+                color: hsl(318, 100%, 51%);
+            }
+            .flex-container {
+                display: flex;
+                justify-content: column;
+            }
+            .flex-container > div {
+                background-color: green;
+                color: wheat;
+                width: 37px;
+                margin: 5px;
+                text-align: center;
+                height:32px;
+                font-size: 30px;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: 90px 180px;
+                grid-gap: 10px;
+                background-color: rgb(20, 129, 218);
+                padding: 10px;
+                justify-content: space-evenly;
+                align-content: center;
+            }
+
+            .grid-container > div {
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 30px;
+            }
+            
+            p[target=top] {     /*Attribute Selector*/
+                color: red;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <div>Housekeeping</div>
+            <span class="sticky">Monday</span> <span class="sticky">Tuesday</span> <span class="sticky">Wednesday</span> <span class="sticky">Thursday</span> <span class="sticky">Friday</span> <span class="sticky">Saturday</span> <span class="sticky">Sunday</span>
+            
+            <p class="intro">Hi!</p>
+            <p id="firstname">Name:</p>
+            <p target="top">attribute_selector</p>
+            <div class="box ch">Housekeeping</div>
             <nav>
                 <ul>
                     <li>Final presentation moved to online</li>
@@ -17,18 +198,18 @@
             </nav>
         </header>
         <main>
-            <h1>Summary for Last Week</h1>
+            <h1 style="color:DodgerBlue;">Summary for Last Week</h1>
             <p>Many staff finished the tasks on time. For those who failed to finish the tasks, <strong>we have kept a record of that and you will receive more supervision</strong>.</p>
-            <h2>Introduction to This Week Working Plan</h2>
-            <details>
+            <h2  style="color:rgb(250, 43, 157);">Introduction to This Week Working Plan</h2>
+            <details class="box em">
                 <summary>What's the workload?</summary>
                 <p>Estimated Total Hours: 28 hours</p>
                 <p>Estimated Hours Per Day: 5.6 hours/day</p>
                 <hr>
                 <p>Keep Moving Forward!</p>
             </details>
-            <h3>Holiday Travelling Plan</h3>
-            <p>We are planning a staff travel during the upcoming holiday. For those who are interested, you may submit a <span class="not mandatory">proposal</span> about the destination of our travel before <b class="day">Wednesday</b>. The following photos show destinations that have been proposed.</p>
+            <h3 style="background-color:hsl(129, 81%, 50%);">Holiday Travelling Plan</h3>
+            <p class="relative">We are planning a staff travel during the upcoming holiday. For those who are interested, you may submit a <span class="not mandatory">proposal</span> about the destination of our travel before <b class="day">Wednesday</b>. The following photos show destinations that have been proposed.</p>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Buildings-city-houston-skyline-1870617.jpg/417px-Buildings-city-houston-skyline-1870617.jpg" alt="Houston"><br>
             <audio controls autoplay>
                 <source src="file_example_MP3_700KB.mp3" type="audio/mpeg">
@@ -43,12 +224,47 @@
                 <li>Review weekly plan.</li>
                 <li>Ask questions/concerns.</li>
                 <li>Do the assigned work.</li>
+                <section>
                 <li>Submit a weekly summary.</li>
-            </ol>           
+                </section>
+            </ol>       
+            <ol>
+                <li>Review weekly plan!</li>
+                <li>Ask questions/concerns!</li>
+                <li>Do the assigned work!</li>
+                <section>
+                <li>Submit a weekly summary!</li>
+                </section>
+            </ol>     
+
+
+            <div>
+                <p>Review</p>
+            </div>
+
+            <p>Ask</p>
+            <code>code part.</code>
+            <p>Submit</p>
         </section>
         <footer>
             <p>The term <i>UCSD</i> is an abbreviation of University of California San Diego with the following address.<br>9500 Gilman Drive<br>La Jolla, CA 92093</p>
-            <form>
+            <div class="flex-container">
+                <div style="order: 5">0</div>
+                <div style="order: 1">1</div>
+                <div style="order: 2">2</div>
+                <div style="order: 3">3</div> 
+                <div style="order: 4">4</div>
+                <div style="flex-grow: 3">0</div>
+             </div>
+             <div class="grid-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>  
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>  
+              </div>
+            <form class="box em">
                 <fieldset>
                     <legend>Play a game!</legend>
                     <label for="city">City:</label>
