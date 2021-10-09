@@ -105,7 +105,6 @@
             div{
                 margin: 75px 200px 75px 100px;
                 padding: 2px 6px 2px 6px;
-                height: 50px;
                 width: 22%;
                 max-width: 16%;
                 /*border: 1px solid #1be2f0;
@@ -162,20 +161,22 @@
                 font-size: 30px;
             }
             .grid-container {
-                display: grid;
+               display: grid;
                 grid-template-columns: auto auto auto;
-                grid-template-rows: 90px 180px;
+                grid-template-rows: 90px 120px 180px;
                 grid-gap: 10px;
                 padding: 10px;
                 justify-content: space-evenly;
                 align-content: center;
-            }
-
-            .grid-container > div {
-                background-color: rgb(255, 255, 255);
-                text-align: center;
-                font-size: 30px;
-            }
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
             
             p[target=top] {     /*Attribute Selector*/
                 color: red;
@@ -256,12 +257,15 @@
                 <div style="order: 4">4</div>
              </div>
              <div class="grid-container">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>  
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>  
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>  
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>  
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>  
               </div>
             <form class="box em">
                 <fieldset>
