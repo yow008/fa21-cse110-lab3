@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sep 23, 2021</title> /* This is not shown on the webpage.*/
+        <title>Sep 23, 2021</title>
         <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="mystyle.css">
         <style>
-            p.intro {
+            
+            
+            p.intro {   /*Combinators*/
                 font-size: 22pt;
             }
             div ~ p {
@@ -22,8 +24,11 @@
             ol li {
                 color: goldenrod;
             }
-            h1, h2, h3 { font-family: helvetica; }
-            #firstname {
+            
+            
+            h1, h2, h3 { font-family: helvetica; }  /*Selector List*/
+            
+            #firstname {            /*ID Selector*/
                 background-color: yellow;
             }
 
@@ -32,12 +37,12 @@
                 src: url(sansation_light.woff);
                 }
 
-            p {
+            p {                 /*Element Selector*/
                 font-family: myFirstFont;
                 font-size: 12pt;
             }
 
-            label* {
+            label* {            /*Universal Selector*/
                 background-color: orange;
             }
 
@@ -51,7 +56,8 @@
                 color: black;
                 width: 20em;
             }
-            .em {
+            
+            .em {           /*Class Selector*/
                 width: 20em;
             }
             .ch {
@@ -105,7 +111,9 @@
             p{
                 margin:auto
             }
-            p.relative{
+            
+           
+            p.relative{  /*Pseudo-class Selector*/
                 position: relative;
                 left: 160px;
             }
@@ -164,7 +172,8 @@
                 text-align: center;
                 font-size: 30px;
             }
-            p[target=top] {
+            
+            p[target=top] {     /*Attribute Selector*/
                 color: red;
             }
         </style>
