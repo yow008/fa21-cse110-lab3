@@ -10,7 +10,7 @@
             
             
             p.intro {               /*Combinators*/
-                font-size: 30pt;
+                font-size: 2vw;     /*Units*/
             }
             div ~ p {
                 color: blue;
@@ -50,7 +50,7 @@
                     background-color: lightgreen;
              }
 
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 700px) { /*Responsiveness - Media Query*/
                 body {
                     background-color: darkgreen;
                 }
@@ -61,7 +61,7 @@
                 width: 20em;
             }
             
-            .em {           /*Class Selector*/
+            .em {                      /*Class Selector*/  /*Units*/
                 width: 20em;
             }
             .ch {
@@ -82,12 +82,12 @@
                 text-align: center;
             }
             h3{
-                text-align: right;
+                text-align: right;              /*text*/
                 text-decoration: line-through;
             }
 
-            .box {
-                height: 150px;
+            .box {              /*Box Model*/ /*Units*/
+                height: 50px;
                 margin-top: 8px;
                 margin-right: 8px;
                 margin-bottom: 12px;
@@ -97,17 +97,15 @@
                 padding-bottom: 40px;
                 padding-left: 16px;
                 border-style: solid;
-                border-radius: 1em;
+                border-radius: 16pt;
                 border-color: purple;
             }
             div{
                 margin: 75px 200px 75px 100px;
                 padding: 2px 6px 2px 6px;
                 width: 22%;
-                max-width: 16%;
-                /*border: 1px solid #1be2f0;
-                background-color: #1be2f0;*/
-                font-size: 1vw;
+                max-width: 16%;         /*Sizing*/
+                font-size: 1.5vw;
             }
             p{
                 margin:auto
@@ -115,26 +113,26 @@
             
            
             p.relative{         /*Pseudo-class Selector*/
-                position: relative;
+                position: relative;     /*position*/
                 left: 160px;
             }
             span {
-                display: inline-block;
+                display: inline-block;      /*display*/
             }
             span.sticky {
-                position: sticky;
+                position: sticky;       /*position*/
                 top: 0;
-                background-color: rgba(228, 253, 1, 0.562);
+                background-color: rgba(228, 253, 1, 0.562); /*Background*/
             }
             i{
-                display:block;
+                display:block;              /*display*/
             }
             legend{
-                width: 8%;
+                width: 8%;                  /*Sizing*/
                 max-width: 14%;
                 background-color: wheat;
             }
-            a:link {
+            a:link {                        /*Pseudo-class*/
                 color: rgb(111, 78, 143);
             }
 
@@ -144,7 +142,7 @@
             a:active {
                 color: hsl(318, 100%, 51%);
             }
-            .flex-container {
+            .flex-container {               /*Flexbox*/
                 display: flex;
                 flex-direction:column;
                }
@@ -158,7 +156,7 @@
                 line-height: 30px;
                 font-size: 30px;
             }
-            .grid-container {
+            .grid-container {               /*Grid*/
                display: grid;
                 grid-template-columns: auto auto auto;
                 grid-template-rows: 90px 120px 180px;
@@ -166,7 +164,6 @@
                 padding: 10px;
                 justify-content: space-evenly;
                 align-content: center;
-                background-color: #2196F3;
                 padding: 10px;
             }
             .grid-item {
